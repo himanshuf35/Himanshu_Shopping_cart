@@ -1,0 +1,140 @@
+body {
+    margin: 0px;
+}
+
+legend {
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#header {
+    position: fixed;
+    background-color: rgb(22, 77, 160);
+    width: 100%;
+    height: 75px;
+    margin: 0px 0px 0px 0px;
+}
+
+#footer {
+    top: 628px;
+    position: fixed;
+    background-color: rgb(66, 134, 244);
+    width: 100%;
+    height: 50px;
+    margin: 0px 0px 0px 0px;
+}
+
+#contact {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f9f9f9;
+}
+
+#name1 {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    bottom: 15px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f9f9f9;
+}
+
+#content {
+    overflow: auto;
+    position: absolute;
+    top: 75px;
+    width: 100%;
+    height: 553px;
+    margin: 0px 0px 0px 0px;
+}
+
+#column1 {
+    height: 553px;
+    float: left;
+    width: 75%;
+    background-color: #f4f5f7;
+}
+
+#column2 {
+    float: left;
+    width: 25%;
+    height: 553px;
+    background-color: #4286f4;
+    overflow: scroll;
+}
+
+#name {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 15px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f9f9f9;
+}
+
+#username {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+    bottom: 25px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c7c9cc;
+}
+
+#side {
+    padding: 10px;
+    width: auto;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f9f9f9;
+}
+
+#right {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    padding: 20px;
+    width: 600px;
+}
