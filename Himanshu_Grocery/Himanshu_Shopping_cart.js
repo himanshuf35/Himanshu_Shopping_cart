@@ -72,7 +72,7 @@ var Vegetables = [{
         category: "Vegetable"
     },
     {
-        name: "green peas",
+        name: "Green-peas",
         MRP: 60,
         category: "Vegetable"
     },
@@ -104,7 +104,7 @@ var Dairy_Product = [{
         category: "Dairy"
     },
     {
-        name: "Butter Milk",
+        name: "Butter-Milk",
         MRP: 15,
         category: "Dairy"
     },
@@ -114,7 +114,7 @@ var Dairy_Product = [{
         category: "Dairy"
     },
     {
-        name: "Ice Cream",
+        name: "Ice-Cream",
         MRP: 160,
         category: "Dairy"
     },
@@ -137,7 +137,7 @@ var Dairy_Product = [{
 ];
 
 var Biscuits = [{
-        name: "Marie Gold",
+        name: "Marie-Gold",
         MRP: 90,
         category: "Biscuit"
     },
@@ -157,7 +157,7 @@ var Biscuits = [{
         category: "Biscuit"
     },
     {
-        name: "Good Day",
+        name: "Good-Day",
         MRP: 38,
         category: "Biscuit"
     },
@@ -235,9 +235,25 @@ function add_to_cart()
     {
         
         let num=document.getElementById(item_to_add.name).value;
+        //let integer = parseInt(num);
         if(num>0)
         {
-            cart_table.push({Name:item_to_add.name,Quantity:num,Category:item_to_add.category,MRP:item_to_add.MRP});    
+            let bool=true;
+            cart_table.forEach((check_exist_item) => 
+            {
+                if(check_exist_item.Name === item_to_add.name)
+                {
+                    bool=false;
+                    check_exist_item.Quantity=num- -check_exist_item.Quantity;
+                    //break;
+                }
+            }
+        );
+        if(bool)
+        {
+            cart_table.push({Name:item_to_add.name,Quantity:num,Category:item_to_add.category,MRP:item_to_add.MRP});
+        }
+                
         }
         console.log(num);
     });
@@ -251,7 +267,7 @@ function add_to_cart()
             //total_amount=total_amount+price;
             //let ID=found_product.name;
             let price=(cart_product.MRP)*(cart_product.Quantity);
-            text_data = text_data + "<tr> <td>" + cart_product.Name + "</td> <td> " + cart_product.Category + "</td> <td>" +cart_product.MRP+ "</td> <td>"+price+ "</td> </tr>";
+            text_data = text_data + "<tr> <td>" + cart_product.Name + "</td> <td> " + cart_product.Category + "</td> <td>" +cart_product.MRP+"</td> <td>" +cart_product.Quantity+ "</td> <td>"+price+ "</td> </tr>";
             
             console.log(price);
         });
@@ -288,7 +304,9 @@ function checkout()
         });
        // text_data = text_data + "</table>";
         //console.log(total_amount);
+        document.getElementById("Table").innerHTML="";
         document.getElementById("static3").innerHTML="Total Amount="+total_amount+""
+       
         
        // 
         
